@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://beeline.co/.well-known/
+note: >-
+  beeline.co is a Shopify-hosted storefront (canonical store
+  ridebeeline.myshopify.com) for Beeline's bike/motorcycle navigation products.
+  The discovery surface below is served by the Shopify commerce platform on the
+  Beeline domain (customer-account OIDC, RFC 8414 authorization-server metadata,
+  and a Universal Commerce Protocol merchant profile) rather than a first-party
+  Beeline product API.
+host: https://beeline.co
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: beeline-openid-configuration.json
+  note: Shopify customer-account OIDC discovery (issuer shopify.com/authentication/18978919)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: beeline-oauth-authorization-server.json
+  note: RFC 8414 authorization-server metadata (Shopify customer accounts)
+- path: /.well-known/ucp
+  status: 200
+  file: beeline-ucp.json
+  note: Universal Commerce Protocol (ucp.dev) merchant profile with an MCP shopping endpoint
+- path: /.well-known/assetlinks.json
+  status: 200
+  note: Android App Links digital asset links (not saved; app-linking metadata)
+- path: /.well-known/apple-app-site-association
+  status: 200
+  note: iOS Universal Links association (not saved; app-linking metadata)
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

@@ -1,8 +1,29 @@
 aid: beeline
 name: Beeline
-description: Beeline is a company surfaced as a portfolio company of seedcamp and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Beeline makes smart navigation devices and a companion mobile app for cyclists
+  and motorcyclists. Its compact handlebar-mounted devices — Beeline Velo for
+  bicycles and Beeline Moto for motorcycles — use a simple directional and
+  turn-by-turn interface to help riders find their way around towns and cities,
+  discover better routes, and record their journeys. The London-based company is
+  backed by Seedcamp. Beeline sells direct to consumers through a Shopify-hosted
+  storefront at beeline.co, which exposes an agent-facing commerce surface — a
+  Universal Commerce Protocol (UCP) MCP endpoint, Shopify customer-account OIDC,
+  and an llms.txt agent policy — rather than a first-party developer product API.
 url: https://raw.githubusercontent.com/api-evangelist/beeline/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://beeline.co/cdn/shop/files/Beeline_logo_favicon.png?v=1748928074&width=180
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +32,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Navigation
+- Cycling
+- Motorcycle
+- Hardware
+- GPS
+- Location
+- Maps
+- Mobile App
+- Consumer Electronics
+- Ecommerce
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +53,32 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://beeline.co
+  url: https://beeline.co
+- type: Blog
+  url: https://beeline.co/blogs/news
+- type: Support
+  url: https://beeline.co/pages/contact
+- type: Login
+  url: https://beeline.co/account
+- type: PrivacyPolicy
+  url: https://beeline.co/policies/privacy-policy
+- type: TermsOfService
+  url: https://beeline.co/policies/terms-of-service
+- type: MCPServer
+  name: Beeline UCP shopping MCP (Shopify storefront)
+  url: mcp/beeline-mcp.yml
+- type: WellKnown
+  url: well-known/beeline-well-known.yml
+- type: LLMsTxt
+  url: llms/beeline-llms.txt
+- type: Authentication
+  url: authentication/beeline-authentication.yml
+- type: OAuthScopes
+  url: scopes/beeline-scopes.yml
+- type: DomainSecurity
+  url: security/beeline-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
