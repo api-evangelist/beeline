@@ -2,11 +2,9 @@ generated: '2026-07-18'
 method: searched
 status: published
 source: https://beeline.co/.well-known/ucp
-note: >-
-  This is the Shopify Universal Commerce Protocol (UCP, ucp.dev) shopping MCP
-  endpoint advertised on the Beeline storefront, not a first-party Beeline
-  product/navigation API. It exposes agent-driven commerce over the Beeline
-  Shopify store (catalog search, cart, checkout, fulfillment). Checkout requires
+note: This is the Shopify Universal Commerce Protocol (UCP, ucp.dev) shopping MCP endpoint advertised
+  on the Beeline storefront, not a first-party Beeline product/navigation API. It exposes agent-driven
+  commerce over the Beeline Shopify store (catalog search, cart, checkout, fulfillment). Checkout requires
   explicit human buyer approval per the store's robots.txt and llms.txt policy.
 server:
   name: beeline-ucp-shopping
@@ -40,3 +38,11 @@ tools:
 - name: complete_checkout
   description: Finalize the purchase (buyer must approve payment).
   source: UCP shopping service (ucp.dev)
+deployment:
+  mode: remote
+  endpoint: https://beeline.co/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
